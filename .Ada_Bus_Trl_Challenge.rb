@@ -6,11 +6,15 @@ name = gets.chomp
 
 puts name + ", please enter your total number of Round Trips: "
 total_trips = gets.chomp.to_i
-if total_trips >= 1
-   puts "Please provide some infomation below: "
-else total_trips <= 0
-  puts "Thank you there is no information needed at this time"
+if total_trips <= 0 
+   puts " You entered zero there is no information needed at this time"
+elsif total_trips >= 6 
+  puts "ERROR: We are able to process more than five Round Trips at a time."
+  # then puts "Please try again"
+else total_trips = [1..5]
+  puts "Please provide some infomation below: "
 end
+
 
 # # user inputs name
 # puts "What is your name?"
