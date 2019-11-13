@@ -15,7 +15,19 @@ name = user_input.capitalize
 puts "#{name},Please input the following for trip #1 "
 puts "Round Trip Ticket Price? " 
 first_ticket = gets.chomp.to_i
+number = gets.chomp
+a = number
 
+until number =~ /^-?[0-9]+$/ 
+  puts "Please enter a numerical vaule "
+ 
+  next unless number !=~ /^-?[0-9]+$/
+  puts "Try agrain"
+
+ number= gets.chomp
+next number =~ /^-?[0-9]+$/
+
+end
 #number of bag
 puts "How many bags did you check? "
 first_bags = gets.chomp.to_f
